@@ -30,7 +30,13 @@ export class AppComponent implements OnInit {
 
   openAddEditEmpForm() {
     //pass that component which you want to open
-    this._dialog.open(EmpAddEditComponent);
+   const dialogRef= this._dialog.open(EmpAddEditComponent);
+   dialogRef.afterClosed().subscribe({
+    next:(val)=>{
+      //means when it will receive true then it will call this
+      this.getAllEmployeeList();
+    }
+   })
   }
   getAllEmployeeList(){
     this._empService.getAllEmployeeList().subscribe({
@@ -49,6 +55,17 @@ export class AppComponent implements OnInit {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+  deleteEmployee(id: number){
+    this._empService.deleteEmployee(id).subscribe({
+      next:(res)=>{
+         alert(`Employee deleted!`);
+         this.getAllEmployeeList();
+      },
+      error:(err)=>{
+        console.log(err)
+      }
+    })
   }
 
 }
