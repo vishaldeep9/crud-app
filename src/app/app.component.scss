@@ -15,3 +15,22 @@
     display: flex;
   }
 }
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.main-body {
+  padding-top: 20px;
+  margin: 0 auto;
+  max-width: 1248px;
+
+  mat-form-field {
+    width: 100%;
+  }
+
+  .icon {
+    display: flex;
+  }
+
+}

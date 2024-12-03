@@ -25,7 +25,6 @@
   ],
   "employees": [
     {
-      "id": "4184",
       "firstName": "Vishal",
       "lastName": "Deep",
       "email": "09vishaldeep@gmail.com",
@@ -34,7 +33,8 @@
       "education": "Graduate",
       "company": "Apexon",
       "experience": 4,
-      "package": 14
+      "package": 14,
+      "id": "4184"
     },
     {
       "id": "4185",
@@ -142,6 +142,18 @@
       "education": "Graduate",
       "company": "Tcs",
       "experience": 2,
+      "package": 6
+    },
+    {
+      "id": "e526",
+      "firstName": "Nagesh",
+      "lastName": "Kumar",
+      "email": "nageshkumar312@gmail.com",
+      "dob": "1992-06-08T18:30:00.000Z",
+      "gender": "",
+      "education": "Post Graduate",
+      "company": "Yspl",
+      "experience": 1,
       "package": 6
     }
   ]

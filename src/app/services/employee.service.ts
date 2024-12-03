@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class EmployeeService {
+
   private baseUrl = 'http://localhost:3000/employees';
 
   constructor(private _http: HttpClient) {}
@@ -18,5 +19,9 @@ export class EmployeeService {
   }
   deleteEmployee(id: number): Observable<any> {
     return this._http.delete(`${this.baseUrl}/${id}`);
+  }
+  updateEmployee(id:number,value: any):Observable<any>
+  {
+    return this._http.put(`${this.baseUrl}/${id}`,value)
   }
 }
