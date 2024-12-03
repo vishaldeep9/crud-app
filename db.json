@@ -37,7 +37,6 @@
       "id": "4184"
     },
     {
-      "id": "4185",
       "firstName": "Ravi",
       "lastName": "Sharma",
       "email": "ravisharma@gmail.com",
@@ -46,7 +45,8 @@
       "education": "Post Graduate",
       "company": "TCS",
       "experience": 6,
-      "package": 18
+      "package": 16,
+      "id": "4185"
     },
     {
       "id": "4186",
@@ -73,7 +73,6 @@
       "package": 12
     },
     {
-      "id": "4190",
       "firstName": "Meera",
       "lastName": "Patel",
       "email": "meerapatel@gmail.com",
@@ -81,8 +80,9 @@
       "gender": "Female",
       "education": "Post Graduate",
       "company": "Apexon",
-      "experience": 4,
-      "package": 15
+      "experience": 2,
+      "package": 19,
+      "id": "4190"
     },
     {
       "id": "4191",
@@ -133,28 +133,28 @@
       "package": 18
     },
     {
-      "id": "7898",
       "firstName": "Ajit",
       "lastName": "Mondal",
       "email": "ajitkumar25167@gmail.com",
       "dob": "1997-06-02T18:30:00.000Z",
-      "gender": "",
+      "gender": "female",
       "education": "Graduate",
       "company": "Tcs",
       "experience": 2,
-      "package": 6
+      "package": 6,
+      "id": "7898"
     },
     {
-      "id": "e526",
       "firstName": "Nagesh",
       "lastName": "Kumar",
       "email": "nageshkumar312@gmail.com",
       "dob": "1992-06-08T18:30:00.000Z",
-      "gender": "",
+      "gender": "male",
       "education": "Post Graduate",
       "company": "Yspl",
       "experience": 1,
-      "package": 6
+      "package": 6,
+      "id": "e526"
     }
   ]
 }

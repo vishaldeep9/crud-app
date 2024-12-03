@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { EmployeeService } from '../services/employee.service';
 import { Router } from '@angular/router';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { CoreService } from '../core/core.service';
 
 @Component({
   selector: 'app-emp-add-edit',
@@ -20,12 +21,14 @@ export class EmpAddEditComponent implements OnInit{
     'Graduate',
     'Post Graduate'
   ]
+  
 
   //inside DialogRef<mention current class name>, after submitting form it will that box
   constructor(private _fb:FormBuilder,private _empService:EmployeeService,private _router:Router,
     private _dialogRef:MatDialogRef<EmpAddEditComponent>,
     //for receiving existing data during edit
-    @Inject(MAT_DIALOG_DATA) public data:any
+    @Inject(MAT_DIALOG_DATA) public data:any,
+    private _coreService: CoreService
   ){}
 
   ngOnInit(): void {
@@ -49,7 +52,8 @@ export class EmpAddEditComponent implements OnInit{
 
       this._empService.updateEmployee(this.data.id,this.empForm.value).subscribe({
         next:(val)=>{
-          alert(`update successfully`);
+          // alert(`updated successfully`);
+          this._coreService.openSnackBar('updated successfully');
           this._dialogRef.close(true)// when it will closed then it will pass true
         },
         error:(err:any)=>{
@@ -59,7 +63,8 @@ export class EmpAddEditComponent implements OnInit{
     }else{
       this._empService.addEmployee(this.empForm.value).subscribe({
         next:(val)=>{
-          alert(`employee added successfully`);
+          // alert(``);
+          this._coreService.openSnackBar('employee added successfully')
           this._dialogRef.close(true)// when it will closed then it will pass true
         },
         error:(err:any)=>{
