@@ -1,0 +1,41 @@
+<button (click)="counter('sub')">--</button>
+<p>{{count}}</p>
+<button (click)="counter('add')">++</button>
+<!-- ===============if else ================== -->
+<!-- 1st Way -->
+<h4 *ngIf="!isShow else elseBlock">Vishal Deep</h4>
+<ng-template #elseBlock>
+    <h4>Vivek Deep</h4>
+</ng-template>
+
+<hr>
+
+<!-- 2nd Way -->
+<h4 *ngIf="!isShow;then block else elseBlock">Vishal Deep</h4>
+<ng-template #block>
+    <h4>Vishal Deep</h4>
+</ng-template>
+
+<ng-template #elseBlock>
+    <h4>Vivek Deep</h4>
+</ng-template>
+<!-- ===============Switch Case ================== -->
+
+<div [ngSwitch]="color">
+    <h3 *ngSwitchCase="'red'" style="color: red;">Red Color</h3>
+    <h3 *ngSwitchCase="'green'" style="color: green;">Green Color</h3>
+    <h3 *ngSwitchCase="'blue'" style="color: blue;">Blue Color</h3>
+    <h3 *ngSwitchCase="'black'" style="color: black;">Black Color</h3>
+    <h3 *ngSwitchCase="'yellow'" style="color: yellow;">Yellow Color</h3>
+    <h2 *ngSwitchDefault>Unknown Color</h2>
+</div>
+<hr>
+<!-- =======Style Binding|Dynamic Style ie,[style.color]========-->
+
+<!-- if we use directly property -->
+<h3 [style.color]="'green'">Style Binding</h3>
+<!-- if we use from ts file  -->
+<h3 [style.color]="color" [style.backgroundColor]="bgColor">Style Binding</h3>
+<button (click)="updateColor()">change color into Blue</button>
+
+

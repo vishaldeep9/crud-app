@@ -25,18 +25,6 @@
   ],
   "employees": [
     {
-      "firstName": "Vishal",
-      "lastName": "Deep",
-      "email": "09vishaldeep@gmail.com",
-      "dob": "1998-05-12T18:30:00.000Z",
-      "gender": "Male",
-      "education": "Graduate",
-      "company": "Apexon",
-      "experience": 4,
-      "package": 14,
-      "id": "4184"
-    },
-    {
       "firstName": "Ravi",
       "lastName": "Sharma",
       "email": "ravisharma@gmail.com",
@@ -71,18 +59,6 @@
       "company": "Wipro",
       "experience": 5,
       "package": 12
-    },
-    {
-      "firstName": "Meera",
-      "lastName": "Patel",
-      "email": "meerapatel@gmail.com",
-      "dob": "1998-08-16T18:30:00.000Z",
-      "gender": "Female",
-      "education": "Post Graduate",
-      "company": "Apexon",
-      "experience": 2,
-      "package": 19,
-      "id": "4190"
     },
     {
       "id": "4191",
@@ -155,6 +131,18 @@
       "experience": 1,
       "package": 6,
       "id": "e526"
+    },
+    {
+      "id": "5672",
+      "firstName": "Vishal",
+      "lastName": "Deep",
+      "email": "vishaldeep2480@gmail.com",
+      "dob": "",
+      "gender": "",
+      "education": "",
+      "company": "",
+      "experience": "",
+      "package": ""
     }
   ]
 }

@@ -13,6 +13,7 @@ import { CoreService } from './core/core.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+  title='crud-app'
   displayedColumns: string[] = [
     'id',
     'firstName',
@@ -70,6 +71,7 @@ export class AppComponent implements OnInit {
     }
   }
   deleteEmployee(id: number) {
+    confirm('Are you sure want to delete?')
     this._empService.deleteEmployee(id).subscribe({
       next: (res) => {
         // alert(`Employee deleted!`);
@@ -81,6 +83,7 @@ export class AppComponent implements OnInit {
       },
     });
   }
+  // data bcz we want to show existing data 
   openEditForm(data: any) {
     const dialogRef = this._dialog.open(EmpAddEditComponent, { data });
     dialogRef.afterClosed().subscribe({
@@ -90,4 +93,5 @@ export class AppComponent implements OnInit {
       },
     });
   }
+
 }
